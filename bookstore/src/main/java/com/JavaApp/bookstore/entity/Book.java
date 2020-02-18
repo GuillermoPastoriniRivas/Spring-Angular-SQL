@@ -53,6 +53,11 @@ public class Book {
 	@JoinColumn(name="category_id", nullable=false)
 	
 	private BookCategory category;
+	
+	public Long getId() {
+		return id;
+		
+	}
 
 	public String getSku() {
 		return sku;

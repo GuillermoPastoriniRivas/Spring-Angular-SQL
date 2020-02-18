@@ -31,6 +31,18 @@ public class BookCategory {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
+	public String getCategoryName() {
+		return categoryName;
+	}
+
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
 	@Column(name="category_name")
 	private String categoryName;
 	
