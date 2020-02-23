@@ -1,19 +1,19 @@
-
-<table>
-    <thead>
-      <tr>
-          <th></th>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Price</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let book of books">
-        <img [src]="book.imageUrl" height="50"/>
-        <td>{{ book.name }}</td>
-        <td>{{ book.description }}</td>
-        <td>{{ book.unitPrice | currency:'USD' }}</td>
-      </tr>
-    </tbody>
-  </table>
+<div id="fh5co-product-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 text-center animate-box">
+        <div class="heading-section">
+          <h2>* Destacados *</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <app-book *ngFor="let book of books" [book] = "book"></app-book>
+    </div>
+    <div class="row">
+      <p class="text-center view-button animate-box">
+        <a href="#" class="btn btn-primary btn-outline btn-lg">Ver todos los titulos</a>
+      </p>
+    </div>
+  </div>
+</div>
